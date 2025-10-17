@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Victor Hernandez — Portfolio</title>
+  <meta name="description" content="Portfolio of Victor Hernandez, CS @ Berea College" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* blinking cursor */
+    #cursor {
+      display: inline-block;
+      width: 8px;
+      margin-left: 2px;
+      background-color: var(--accent);
+      animation: blink 0.9s steps(1) infinite;
+      height: 1.2em;
+      vertical-align: bottom;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      50.01%, 100% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="topbar">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <div class="logo">VH</div>
+    </div>
+
+    <div class="brand">
+      <h1>Victor<br>Hernandez</h1>
+      <p class="subtitle">CS @ Berea ’27</p>
+    </div>
+
+    <nav class="tabs">
+      <button class="tab-link active" data-tab="intro">Intro</button>
+      <button class="tab-link" data-tab="experience">Experience</button>
+      <button class="tab-link" data-tab="projects">Projects</button>
+      <button class="tab-link" data-tab="resume">Résumé</button>
+      <button class="tab-link" data-tab="contact">Contact</button>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <!-- Intro -->
+    <section id="intro" class="tab-content active fade">
+      <div class="hero">
+        <img src="assets/NASA.jpg" alt="Victor Hernandez" class="headshot">
+        <div class="hero-text">
+          <h2><span id="typewriter"></span><span id="cursor"></span></h2>
+          <p>Computer Science student @ Berea College and previous NASA intern, with a strong interest and passion for security and software development—building secure, efficient, and human-centered systems.</p>
+          <div class="cta">
+            <button class="btn primary" data-tab="projects">View Projects</button>
+            <a class="btn ghost" href="docs/Victor_Hernandez_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="tab-content fade">
+      <h3>Experience</h3>
+      <div class="exp-card">
+        <h4>Flight Software Development Intern — NASA Johnson Space Center</h4>
+        <ul>
+          <li>Designed and developed a custom Graphical User Interface (GUI).</li>
+          <li>Translated and optimized code from LabVIEW to Python for performance and compatibility.</li>
+          <li>Engineered software for an exercise device intended for space deployment.</li>
+          <li>Submitted an NTR (MSC-27772-1) as a NASA innovator.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>Space Exploration Vehicle Software Intern — NASA Johnson Space Center</h4>
+        <ul>
+          <li>Engineered and optimized rover software systems integrating hardware and software interfaces.</li>
+          <li>Developed a custom Driver Station UI for intuitive mission control.</li>
+          <li>Programmed Raspberry Pi and NVIDIA Jetson for real-time software deployment.</li>
+          <li>Implemented controller-based rover mobility validation and telemetry tracking.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h4>Information Systems & Services Tier 2 Manager — Berea College</h4>
+        <ul>
+          <li>Diagnose and repair Dell hardware and software with certification-backed workflows.</li>
+          <li>Deliver fast and reliable technical support to faculty, staff, and students.</li>
+          <li>Manage system imaging, maintenance, and troubleshooting operations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="tab-content fade">
+      <h3>Projects</h3>
+      <div class="proj-card">
+        <h4>ISS Exercise System GUI — NASA Johnson Space Center</h4>
+        <p>Developed a robust, astronaut-friendly GUI used on the International Space Station to support exercise equipment workflows, including safety checks, telemetry visibility, and fault diagnostics in microgravity.</p>
+      </div>
+
+      <div class="proj-card">
+        <h4>Two-Factor Authentication System</h4>
+        <p>Implemented secure login and account creation with Java-based 2FA. Designed for clarity, security, and scale.</p>
+      </div>
+
+      <div class="proj-card">
+        <h4>uChariot Rover GUI</h4>
+        <p>Built a Python GUI for real-time rover navigation with VR data mapping, enabling joystick control and autonomous pathing.</p>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="tab-content fade">
+      <h3>Résumé</h3>
+      <p>Download my full résumé as a PDF:</p>
+      <a class="btn primary" href="docs/Victor_Hernandez_Resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tab-content fade">
+      <h3>Contact</h3>
+      <ul class="links">
+        <li><a href="mailto:victor0129hernandez@gmail.com">victor0129hernandez@gmail.com</a></li>
+        <li><a href="https://github.com/projects" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/victor-hernandez-4876222b0/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <footer class="footer">© <span id="year"></span> Victor Hernandez</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
